@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Dental</title>
+    <style>
+        /* Estilos generales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Título principal */
+        h1 {
+            color: #1c4b82;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor para las imágenes */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px; /* Espacio entre las imágenes */
+            flex-wrap: wrap; /* Permite que las imágenes se reorganicen en pantallas pequeñas */
+        }
+
+        /* Estilo para cada tarjeta de imagen */
+        .image-card {
+            position: relative; /* Necesario para posicionar la descripción dentro de la tarjeta */
+            width: 350px;
+            height: 350px;
+            overflow: hidden; /* Oculta la descripción que se sale de la tarjeta */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Efecto de ligero levantamiento al pasar el cursor */
+        .image-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Estilo de la imagen dentro de la tarjeta */
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra todo el espacio sin deformarse */
+            transition: transform 0.4s ease;
+        }
+
+        /* Efecto de zoom en la imagen al pasar el cursor */
+        .image-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Estilo para la descripción */
+        .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+            color: white;
+            padding: 40px 20px 20px 20px; /* Más espacio arriba para el degradado */
+            
+            /* Inicialmente, la descripción está oculta abajo */
+            transform: translateY(100%);
+            transition: transform 0.4s ease-in-out;
+        }
+        
+        /* Cuando se pasa el cursor sobre la tarjeta, la descripción se desliza hacia arriba */
+        .image-card:hover .description {
+            transform: translateY(0);
+        }
+        
+        .description h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+        
+        .description p {
+            margin-bottom: 0;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Salud Bucodental: Prevención y Cuidado</h1>
+
+    <div class="container">
+        
+        <div class="image-card">
+            <img src="https://static.vecteezy.com/system/resources/previews/028/371/358/large_2x/aesthetic-dentistry-of-denture-front-view-of-complete-denture-isolate-on-a-blue-background-generative-ai-photo.jpeg">
+            <div class="description">
+                <h3>Dentadura Sana</h3>
+                <p>Una sonrisa saludable es reflejo de una buena salud general. El cuidado diario, como el cepillado y el uso de hilo dental, es fundamental para prevenir caries, enfermedades de las encías y mantener los dientes fuertes y blancos.</p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="https://polisantafe.com.ar/wp-content/uploads/cuanto-tiempo-dura-una-placa-de-relajacion.webp">
+            <div class="description">
+                <h3>Placa de Relajación</h3>
+                <p>También conocida como férula oclusal, se utiliza para tratar el bruxismo (apretar o rechinar los dientes). Protege los dientes del desgaste, alivia la tensión en la mandíbula y previene dolores de cabeza y musculares asociados.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
